@@ -1,0 +1,35 @@
+# Private working evidence: never publish unreviewed dumps or captures.
+/private/
+/captures/
+/raw/
+radio-settings.*
+baseline.json
+*.pcap
+*.pcapng
+*.cap
+*.pcap.*
+*.pcapng.*
+*.mitm
+*.har
+*.log
+*.heic
+*.HEIC
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Firmware/diagnostic archives can contain proprietary code or credentials.
+*.bin
+*.img
+*.swu
+*.tgz
+*.tar
+*.tar.gz
+*.zip
+*.enc

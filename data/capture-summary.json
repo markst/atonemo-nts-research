@@ -1,0 +1,81 @@
+{
+  "capture_date": "2026-11-05",
+  "analysis_date": "2026-11-06",
+  "duration_seconds": 3096.163181,
+  "packets": 159344,
+  "bytes": 113597060,
+  "segments": [
+    {
+      "source": "radio_00001_20261105214318.pcapng",
+      "packets": 140289,
+      "bytes": 100000008,
+      "duration_seconds": 2733.972713
+    },
+    {
+      "source": "radio_00002_20261105223041.pcapng",
+      "packets": 19055,
+      "bytes": 13597052,
+      "duration_seconds": 362.190467
+    }
+  ],
+  "starting_baseline": {
+    "firmware_version": "1.0.22.0xefb17f3",
+    "updater_state": "idle",
+    "configured_periodic_check_hours": 6,
+    "mitm_enabled_by_capture_run": false
+  },
+  "capture_configuration": {
+    "interface_type": "macOS Internet Sharing bridge",
+    "filter": "ether host <DEVICE_MAC> or (udp and (port 67 or port 68))",
+    "ring_files": 12,
+    "ring_file_size_kB": 100000
+  },
+  "dns_or_sni_counts": {
+    "time.google.com": 2,
+    "connectivitycheck.gstatic.com": 156,
+    "stream-relay-geo.ntslive.net": 11,
+    "streams.radiomast.io": 35,
+    "audio-edge-d34v9.syd.o.radiomast.io": 30,
+    "stream-mixtape-geo.ntslive.net": 71
+  },
+  "matching_plaintext_requests_from_radio": 0,
+  "conclusion": "No identifiable firmware-update destination or separate firmware download found in this window; does not establish that no check occurred.",
+  "limitations": [
+    "Window shorter than configured six-hour interval.",
+    "TLS payloads not decrypted.",
+    "Counts combine DNS questions and TLS SNI appearances, not connections.",
+    "DHCP filter can capture other devices; raw captures remain private."
+  ],
+  "private_capture_inventory": [
+    {
+      "source": "device-boot.pcap",
+      "bytes": 167891292,
+      "sha256": "31e6a4894a9d8c30bbf216d0f2c1eca66d6d83a019454b94ed129b174ddead45",
+      "included": false
+    },
+    {
+      "source": "radio-fwcheck.pcapng",
+      "bytes": 13655364,
+      "sha256": "f183c76531c982ee9df084a46ec421a2c7807446258f963b4112116c2f5ff54b",
+      "included": false
+    },
+    {
+      "source": "radio-mitm.pcapng",
+      "bytes": 30408,
+      "sha256": "08dbacca8a22bd5cd299a8540145a810dacf457c98af1c63107fab79a443961e",
+      "included": false
+    },
+    {
+      "source": "radio_00001_20261105214318.pcapng",
+      "bytes": 100000008,
+      "sha256": "e544bfd5c98b0b15745b54cdcbc3bda8174dc590d32ce90c79fbcc96ae7e1bd2",
+      "included": false
+    },
+    {
+      "source": "radio_00002_20261105223041.pcapng",
+      "bytes": 13597052,
+      "sha256": "3614b3dbf86f0fa95b82e6130789818c6f345c8a1f980c6cf0c10cd93d6d9784",
+      "included": false
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "provenance": "Explicit allowlist from a saved settings collector output; not a complete raw HTTP response. Collector errors use _err.",
+  "nodes": {
+    "settings:/system/boardName": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "AtonemoStream210L2"
+      },
+      "type": "value",
+      "path": "settings:/system/boardName",
+      "title": "Board Name",
+      "value": {
+        "type": "string_",
+        "string_": "AtonemoStream210L2"
+      }
+    },
+    "settings:/system/manufacturer": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "Atonemo"
+      },
+      "type": "value",
+      "path": "settings:/system/manufacturer",
+      "title": "Device Manufacturer",
+      "value": {
+        "type": "string_",
+        "string_": "Atonemo"
+      }
+    },
+    "settings:/system/modelName": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "NTS Radio Player"
+      },
+      "type": "value",
+      "path": "settings:/system/modelName",
+      "title": "Model Name",
+      "value": {
+        "type": "string_",
+        "string_": "NTS Radio Player"
+      }
+    },
+    "settings:/system/productName": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "2025 Atonemo Streamer"
+      },
+      "type": "value",
+      "path": "settings:/system/productName",
+      "title": "Product Name",
+      "value": {
+        "type": "string_",
+        "string_": "2025 Atonemo Streamer"
+      }
+    },
+    "settings:/atonemo/productModel": {
+      "defaultValue": {
+        "type": "atonemoProductModel",
+        "atonemoProductModel": "ntsplayer"
+      },
+      "type": "value",
+      "path": "settings:/atonemo/productModel",
+      "title": "Product model",
+      "value": {
+        "type": "atonemoProductModel",
+        "atonemoProductModel": "ntsplayer"
+      }
+    },
+    "settings:/wac/hardwareRevision": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "L2"
+      },
+      "type": "value",
+      "path": "settings:/wac/hardwareRevision",
+      "title": "Hardware Revision",
+      "value": {
+        "type": "string_",
+        "string_": "L2"
+      }
+    },
+    "settings:/version": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "1.0.22.0xefb17f3"
+      },
+      "type": "value",
+      "path": "settings:/version",
+      "title": "Version",
+      "value": {
+        "type": "string_",
+        "string_": "1.0.22.0xefb17f3"
+      }
+    },
+    "settings:/releasetext": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "Streamplayer-1.0.22"
+      },
+      "type": "value",
+      "path": "settings:/releasetext",
+      "title": "Release Text",
+      "value": {
+        "type": "string_",
+        "string_": "Streamplayer-1.0.22"
+      }
+    },
+    "settings:/versionSDK": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "Streamplayer-1.0.22-0-gefb17f3"
+      },
+      "type": "value",
+      "path": "settings:/versionSDK",
+      "title": "SDK version",
+      "value": {
+        "type": "string_",
+        "string_": "Streamplayer-1.0.22-0-gefb17f3"
+      }
+    },
+    "ui:/settings/version/bsp_version": {
+      "type": "value",
+      "path": "ui:/settings/version/bsp_version",
+      "title": "BSP",
+      "value": {
+        "string_": "25.03-Nickel-6-gc45105267",
+        "type": "string_"
+      }
+    },
+    "ui:/settings/version/kernel_version": {
+      "type": "value",
+      "path": "ui:/settings/version/kernel_version",
+      "title": "Kernel",
+      "value": {
+        "string_": "Linux version 6.6.30-00246-g261db1487919-dirty (oe-user@oe-host) (arm-sue-linux-gnueabi-gcc (GCC) 13.3.0, GNU ld (GNU Binutils) 2.42.0.20240723) #1 SMP PREEMPT Thu Apr  9 12:29:40 UTC 2026",
+        "type": "string_"
+      }
+    },
+    "ui:/settings/version/machine_name": {
+      "type": "value",
+      "path": "ui:/settings/version/machine_name",
+      "title": "Machine name",
+      "value": {
+        "string_": "streamplayer",
+        "type": "string_"
+      }
+    },
+    "ui:/settings/version/hostlink_version": {
+      "_err": "HTTP Error 500: Internal Server Error"
+    },
+    "settings:/fwupdate/periodicCheckInterval": {
+      "defaultValue": {
+        "type": "i32_",
+        "i32_": 6
+      },
+      "type": "value",
+      "path": "settings:/fwupdate/periodicCheckInterval",
+      "title": "Periodic check interval [h]",
+      "value": {
+        "type": "i32_",
+        "i32_": 6
+      }
+    },
+    "settings:/fwupdate/minSystemIdleTime": {
+      "defaultValue": {
+        "type": "i32_",
+        "i32_": 600
+      },
+      "type": "value",
+      "path": "settings:/fwupdate/minSystemIdleTime",
+      "title": "Minimum system-idle-time when to perform silent swupdate",
+      "modifiable": true,
+      "value": {
+        "type": "i32_",
+        "i32_": 600
+      }
+    },
+    "settings:/fwupdate/retryCount": {
+      "defaultValue": {
+        "type": "i32_",
+        "i32_": 3
+      },
+      "type": "value",
+      "path": "settings:/fwupdate/retryCount",
+      "title": "Download retry count",
+      "value": {
+        "type": "i32_",
+        "i32_": 3
+      }
+    },
+    "settings:/fwupdate/stopOnFirstUpdateFound": {
+      "defaultValue": {
+        "type": "bool_",
+        "bool_": false
+      },
+      "type": "value",
+      "path": "settings:/fwupdate/stopOnFirstUpdateFound",
+      "title": "Stop on first update found",
+      "value": {
+        "type": "bool_",
+        "bool_": false
+      }
+    },
+    "ui:/settings/update/usbUpdateInfo": {
+      "path": "ui:/settings/update/usbUpdateInfo",
+      "title": "Plug in USB stick and reboot while pressing the update button."
+    },
+    "settings:/webserver/port": {
+      "defaultValue": {
+        "type": "i32_",
+        "i32_": 80
+      },
+      "type": "value",
+      "path": "settings:/webserver/port",
+      "title": "Webserver port",
+      "value": {
+        "type": "i32_",
+        "i32_": 80
+      },
+      "description": "Webserver port is generated based on machines.py - do not edit this file"
+    },
+    "settings:/webserver/httpsPort": {
+      "defaultValue": {
+        "type": "i32_",
+        "i32_": 443
+      },
+      "type": "value",
+      "path": "settings:/webserver/httpsPort",
+      "title": "Webserver port",
+      "value": {
+        "type": "i32_",
+        "i32_": 443
+      },
+      "description": "Webserver port is generated based on machines.py - do not edit this file"
+    },
+    "settings:/webserver/documentRoot": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "/www/pages"
+      },
+      "type": "value",
+      "path": "settings:/webserver/documentRoot",
+      "title": "Webserver document root",
+      "value": {
+        "type": "string_",
+        "string_": "/www/pages"
+      }
+    },
+    "settings:/webserver/authMode": {
+      "defaultValue": {
+        "type": "webserverAuthMode",
+        "webserverAuthMode": "setData"
+      },
+      "type": "value",
+      "path": "settings:/webserver/authMode",
+      "title": "Authorization mode",
+      "modifiable": true,
+      "value": {
+        "type": "webserverAuthMode",
+        "webserverAuthMode": "setData"
+      },
+      "edit": {
+        "type": "enum_",
+        "enumPath": "settings:/webserver/authModes"
+      }
+    },
+    "settings:/webserver/strict": {
+      "defaultValue": {
+        "type": "bool_",
+        "bool_": true
+      },
+      "type": "value",
+      "path": "settings:/webserver/strict",
+      "title": "Strict mode",
+      "value": {
+        "type": "bool_",
+        "bool_": true
+      }
+    },
+    "settings:/webserver/httpsUseDeviceCert": {
+      "defaultValue": {
+        "type": "bool_",
+        "bool_": true
+      },
+      "type": "value",
+      "path": "settings:/webserver/httpsUseDeviceCert",
+      "title": "Webserver https use device cert",
+      "value": {
+        "type": "bool_",
+        "bool_": true
+      }
+    },
+    "ui:/debug/testPlayback/url": {
+      "type": "value",
+      "path": "ui:/debug/testPlayback/url",
+      "title": "Url",
+      "modifiable": true,
+      "value": {
+        "string_": "",
+        "type": "string_"
+      }
+    },
+    "settings:/spotify/presets": {
+      "timestamp": 1775741507902,
+      "type": "value",
+      "path": "settings:/spotify/presets",
+      "title": "presets",
+      "modifiable": true,
+      "value": {
+        "presets": []
+      }
+    },
+    "settings:/bleControl/wifiServiceUuid": {
+      "defaultValue": {
+        "type": "string_",
+        "string_": "CEE499E3-43A8-51D2-E7F4-1626AD235C0F"
+      },
+      "type": "value",
+      "path": "settings:/bleControl/wifiServiceUuid",
+      "title": "Wifi Pairing Service UUID",
+      "value": {
+        "type": "string_",
+        "string_": "CEE499E3-43A8-51D2-E7F4-1626AD235C0F"
+      }
+    },
+    "settings:/bleControl/advertiseConnected": {
+      "defaultValue": {
+        "type": "bool_",
+        "bool_": false
+      },
+      "type": "value",
+      "path": "settings:/bleControl/advertiseConnected",
+      "title": "Advertise in connected state",
+      "modifiable": true,
+      "value": {
+        "type": "bool_",
+        "bool_": false
+      }
+    }
+  }
+}

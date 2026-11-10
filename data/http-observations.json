@@ -1,0 +1,156 @@
+{
+  "provenance": "Selected HTTP requests and paired responses decoded from local captures using tshark two-pass analysis. Host/IP/transport identifiers, authorization headers and challenge parameters omitted; authentication_scheme retains only the scheme. Raw captures are private.",
+  "exchanges": [
+    {
+      "source": "device-boot.pcap",
+      "request_frame": 220658,
+      "response_frame": 220665,
+      "request": {
+        "method": "GET",
+        "uri": "/api/getData?path=settings:/version&roles=@all",
+        "body": null
+      },
+      "response": {
+        "status": 200,
+        "authentication_scheme": null,
+        "body": {
+          "defaultValue": {
+            "type": "string_",
+            "string_": "1.0.22.0xefb17f3"
+          },
+          "type": "value",
+          "path": "settings:/version",
+          "title": "Version",
+          "value": {
+            "type": "string_",
+            "string_": "1.0.22.0xefb17f3"
+          }
+        }
+      }
+    },
+    {
+      "source": "radio-fwcheck.pcapng",
+      "request_frame": 189,
+      "response_frame": 196,
+      "request": {
+        "method": "POST",
+        "uri": "/api/setData",
+        "body": {
+          "path": "firmwareupdate:uiStartUpdate",
+          "role": "activate",
+          "value": {}
+        }
+      },
+      "response": {
+        "status": 401,
+        "authentication_scheme": "HMAC_SHA256",
+        "body": {
+          "error": {
+            "title": "Error",
+            "name": "error",
+            "message": "Forbidden"
+          }
+        }
+      }
+    },
+    {
+      "source": "radio-fwcheck.pcapng",
+      "request_frame": 2536,
+      "response_frame": 2543,
+      "request": {
+        "method": "POST",
+        "uri": "/api/setData",
+        "body": {
+          "path": "firmwareupdate:checkForUpdate",
+          "role": "activate",
+          "value": {}
+        }
+      },
+      "response": {
+        "status": 401,
+        "authentication_scheme": "HMAC_SHA256",
+        "body": {
+          "error": {
+            "title": "Error",
+            "name": "error",
+            "message": "Forbidden"
+          }
+        }
+      }
+    },
+    {
+      "source": "radio-fwcheck.pcapng",
+      "request_frame": 483,
+      "response_frame": 490,
+      "request": {
+        "method": "GET",
+        "uri": "/api/getRows?path=firmwareupdate:uiInternet&roles=@all&from=0&to=20",
+        "body": null
+      },
+      "response": {
+        "status": 200,
+        "authentication_scheme": null,
+        "body": {
+          "roles": {
+            "type": "container",
+            "path": "firmwareupdate:uiInternet",
+            "title": "Internet Update",
+            "containerType": "none"
+          },
+          "rows": [
+            {
+              "type": "action",
+              "path": "firmwareupdate:uiStartUpdate",
+              "title": "Check for update",
+              "renderAsButton": true
+            }
+          ],
+          "rowsCount": 1,
+          "rowsVersion": 0
+        }
+      }
+    },
+    {
+      "source": "radio-fwcheck.pcapng",
+      "request_frame": 11584,
+      "response_frame": 11590,
+      "request": {
+        "method": "GET",
+        "uri": "/api/getData?path=firmwareupdate:checkForUpdate&roles=%40all",
+        "body": null
+      },
+      "response": {
+        "status": 200,
+        "authentication_scheme": null,
+        "body": {
+          "type": "action",
+          "path": "firmwareupdate:checkForUpdate"
+        }
+      }
+    },
+    {
+      "source": "radio-fwcheck.pcapng",
+      "request_frame": 17858,
+      "response_frame": 17865,
+      "request": {
+        "method": "GET",
+        "uri": "/api/getData?path=firmwareupdate:updateStatus&roles=%40all",
+        "body": null
+      },
+      "response": {
+        "status": 200,
+        "authentication_scheme": null,
+        "body": {
+          "type": "value",
+          "path": "firmwareupdate:updateStatus",
+          "value": {
+            "type": "firmwareUpdateStatus",
+            "firmwareUpdateStatus": {
+              "state": "idle"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

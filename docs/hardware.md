@@ -38,7 +38,19 @@ These are cropped, resized derivatives of two owner-supplied photographs. Black 
 
 These are **manufacturer specifications for the module family**, not measurements of this unit. The shield was not removed, the NAND was not dumped and usable RAM was not measured. Module capabilities do not establish which interfaces or services Atonemo enables in production. In particular, vendor references to secure boot, SSH and USB updates do not prove this radio's security configuration, accessible shell or recovery support.
 
-The `DRV632` marking is visible. Its role in the exact signal path has not been traced; there is no measured DAC/output schematic here.
+### Audio output path and DAC
+
+**Inference, not traced:** there is probably no discrete DAC. Conversion most likely happens in the Stream210 module's integrated codec, and `DRV632` buffers the analogue result for the 3.5 mm jack.
+
+- `DRV632` (Texas Instruments) is a 2 Vrms line driver with an analogue input, not a DAC. The adjacent 4.7 µF / 25 V capacitors fit an analogue output stage.
+- StreamUnlimited specifies the Stream210 with a built-in **24-bit ADC/DAC** and **4× analogue in/out**, provided by the RTL8730E.
+- No other legible package near the module or jack looks like a DAC. `U3`, `U4` and `U5` sit near USB-C, `ENC1` and `CN1`; their markings are unreadable in these photos.
+
+Likely path: RTL8730E codec → module analogue output pads → `DRV632` → `CN1`.
+
+To confirm: read the `U3`/`U4`/`U5` markings under magnification; with power disconnected, check continuity from the `DRV632` inputs to the module pads. A chip connected by I²S traces (bit clock, frame clock, data) that feeds the `DRV632` would instead be the DAC.
+
+Atonemo advertises 24-bit / 192 kHz playback. Realtek does not publish this codec's sample-rate limits, so whether analogue output actually runs at 192 kHz is unverified.
 
 [Atonemo's product page](https://atonemo.com/products/nts) describes 3.5 mm AUX output and USB-C **power, 5 V / 1 A**. Do not transfer optical-output claims from the separate Atonemo Streamplayer product to this NTS unit.
 

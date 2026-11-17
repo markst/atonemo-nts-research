@@ -60,7 +60,17 @@ These are **not counts of connections, downloads or update checks**. DNS respons
 
 **Limits:** TLS payloads were not decrypted; an update check could be hidden in encrypted traffic or use an already-known host. The window was shorter than the configured six-hour interval. Absence of an identifiable download does not establish absence of a check, absence of updates, or permanent lack of a server. The outgoing-request filter says nothing about plaintext requests from a controller to the radio's LAN API.
 
-Full numeric summary and SHA-256 digests of the private captures: [capture-summary.json](../data/capture-summary.json).
+## Automatic setup check, 2026-11-17
+
+During a factory-reset/setup flow, the app displayed **“System is up to date”** automatically; no manual update button was available. A simultaneous whole-bridge capture covered **166.3 seconds**, 5,438 packets and zero packet drops.
+
+The phone repeatedly queried the mDNS service `_atonemo._tcp.local`. After the radio re-announced its local services, the radio resolved **`cdn.atonemo.com`** and opened a TLS connection using SNI `cdn.atonemo.com` to an Amazon CloudFront address. The connection began about two seconds after the radio's service advertisement and transferred approximately 11 kB in the conversation summary.
+
+This is the strongest observed candidate for the automatic setup/update lookup, but it is **not proof**: the TLS payload was not decrypted, and the same CDN could serve setup metadata or other configuration. No firmware filename, manifest, version response or download was visible. The radio also contacted the normal NTS/Radiomast and Google connectivity services.
+
+The phone's mDNS traffic exposed the radio's `_atonemo._tcp.local` service and advertised local HTTP/HTTPS ports 80/443; unique serial/UUID TXT values were present in the raw capture but are intentionally omitted from the repository. No plaintext phone-to-radio HTTP exchange was observed in this capture; setup control may use encrypted local HTTPS or Bluetooth.
+
+Full numeric summary and SHA-256 digests of the earlier private captures: [capture-summary.json](../data/capture-summary.json). Sanitized setup evidence: [setup-update-observation-2026-11-17.json](../data/setup-update-observation-2026-11-17.json).
 
 ## Reproduce passive observation
 

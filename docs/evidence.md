@@ -17,7 +17,7 @@ This repository is a curated research record, not the original conversation tran
 | `data/http-observations.json` | Six selected request/response pairs decoded with `tshark -2`, joined using response frame references. Hosts/IPs, authorization headers and challenge parameters excluded. Includes successful reads and rejected update actions. |
 | `data/nts-mixtapes.json` | Five fields per station from the saved public NTS catalogue; 16 entries. Original retained response URL and self-link establish provenance. |
 | `data/capture-summary.json` | Passive-capture statistics, starting baseline, DNS/SNI aggregate, limitations and private-source SHA-256 inventory. Not packet payloads. |
-| `images/board-component-side.png` | Cropped/resized owner photograph; identifiers, QR codes and handwritten markings masked. |
+| `data/setup-update-observation-2026-11-17.json` | Sanitized whole-bridge setup observation: mDNS `_atonemo`, Atonemo CDN DNS/TLS timing, packet count and interpretation limits. Phone/radio identifiers, raw capture and TLS payloads excluded. |
 | `images/board-underside.png` | Cropped/resized owner photograph showing numbered test pads. |
 
 The PNGs were rebuilt from pixel data using only `IHDR`, `IDAT` and `IEND` chunks; no source metadata or original thumbnail is embedded. Original photographs are not included.

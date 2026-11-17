@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-17",
+  "scenario": "Factory reset followed by official app setup; app automatically displayed System is up to date",
+  "capture": {
+    "duration_seconds": 166.306622,
+    "packets": 5438,
+    "packet_drops": 0,
+    "raw_capture_included": false
+  },
+  "local_discovery": {
+    "service": "_atonemo._tcp.local",
+    "radio_advertised_ports": [80, 443],
+    "unique_txt_values_omitted": true
+  },
+  "radio_observations": {
+    "cdn_dns_name": "cdn.atonemo.com",
+    "cdn_tls_server_name": "cdn.atonemo.com",
+    "cdn_connection": {
+      "transport": "TLS over TCP",
+      "destination_address_omitted": true,
+      "approximate_conversation_bytes": 11200
+    },
+    "normal_services_also_seen": [
+      "stream-relay-geo.ntslive.net",
+      "streams.radiomast.io",
+      "audio-edge-d34v9.syd.o.radiomast.io",
+      "connectivitycheck.gstatic.com",
+      "time.google.com"
+    ]
+  },
+  "interpretation": {
+    "strongest_candidate": "The Atonemo CDN TLS exchange may be the automatic setup/update lookup.",
+    "not_proven": [
+      "The CDN response was not decrypted.",
+      "No firmware manifest, filename, version response or firmware download was identified.",
+      "The CDN may provide setup metadata or other configuration rather than firmware status.",
+      "No plaintext phone-to-radio HTTP exchange was observed; HTTPS or Bluetooth remains possible."
+    ]
+  },
+  "source_note": "Derived from a private whole-bridge pcapng capture; phone, radio, MAC, IP, serial, UUID, and raw capture details are intentionally excluded."
+}

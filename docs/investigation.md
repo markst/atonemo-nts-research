@@ -36,7 +36,11 @@ If an update package becomes legitimately available, analyze it offline before a
 
 ## 6. Map hardware access conservatively
 
-Seek schematics/pin documentation, or identify ground and pads electrically before connecting probes. Module specifications advertise UART/USB capabilities but do not identify this board's test pads.
+The public Stream210 documentation confirms that the module family exposes UART and SWD interfaces, and that the Stream210 evaluation board has a USB-connected UART debug interface. The [Stream210 product brief](https://www.streamunlimited.com/wp-content/uploads/2025/05/Stream210-Non-Audio.pdf) does **not** publish the 75-pad signal assignment, so the module outline/pad numbering alone cannot identify TX, RX, ground, boot straps or SWD pins.
+
+The [FCC filing for FCC ID 2AJYB-S210](https://fccid.io/2AJYB-S210) provides public user-manual and internal-photo exhibits. Its public exhibit index does not expose a pinout or schematic; the filing is useful for module identity and compliance evidence, not as a console wiring guide. The Stream210 hardware guide also says field updates use a secure mechanism and that direct local access is protected. Those are module-family/OEM documentation statements, not proof of the Atonemo unit's exact boot configuration.
+
+Seek the Stream210 hardware-integration manual or evaluation-board documentation from StreamUnlimited/Atonemo before probing. Identify ground and pads electrically before connecting probes. Module specifications advertise UART/USB capabilities but do not identify this board's test pads.
 
 **Evidence needed:** annotated board revision, continuity measurements, logic voltage, signal direction and receive-only boot output. A console does not imply root access, a writable bootloader or safe recovery. Preserve the working unit; no blind pad-short, voltage injection or guessed firmware flashing.
 

@@ -51,6 +51,6 @@ Reviewed during repository preparation on 2026-11-06:
 
 ## Verification record
 
-Assembly checks cover JSON parsing, allowlist selection, selected HTTP frame/body provenance, catalogue comparison, local Markdown links, image encoding/redaction review and Git ignore behavior. No new firmware writes, update activation, TLS interception or hardware probing was performed to create the repository.
+- [FCC ID 2AJYB-S210](https://fccid.io/2AJYB-S210): public filing index, user manual and internal-photo exhibits; no public pinout was found in the index.
 
 The last recorded device address refused a read-only connection during preparation. Live API examples are therefore backed by historical packet exchanges, not a claim of current device reachability. Unavailable earlier experiment details remain explicitly unknown.
